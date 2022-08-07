@@ -1,0 +1,37 @@
+.wrapper {
+display: grid;
+grid-template: minmax(90px, auto) 1fr minmax(100px, auto) /1fr;
+grid-template-areas: 
+"header header"
+"main main"
+"footer footer";
+min-height: 100vh;
+}
+.header {
+    display: grid;
+    grid-area: header;
+    grid-template: 1fr / 1fr minmax(auto, 300px)minmax(auto, 900px) 1fr;
+&__logo {
+    display: grid;
+    grid-column: 2/3;
+    align-content: center;
+}
+&__menu {
+    grid-column: 3/4;
+   
+}
+.menu__list {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: end;
+    align-items: center;
+}
+}
+.main {
+    grid-area: main;
+    display: grid;
+}
+.footer {
+    display: grid;
+    grid-area: footer;
+}

@@ -1,0 +1,19 @@
+header {
+    padding-top: 30px;
+
+    .menu__list {
+        
+        a {
+        color:white;
+        text-decoration: none;
+        }
+        .menu__link_active {
+            background-color: white;
+            padding: 10px 25px;
+            border-radius: 20px;
+            a {
+                color:black;
+            }            
+        }
+    }
+}
