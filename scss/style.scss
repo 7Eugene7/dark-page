@@ -2,7 +2,13 @@
 @import "base/_fonts.scss";
 @import "layout/_grid.scss";
 @import "layout/_header.scss";
+
+
 body {
     background-color: black;
     font-family: Poppins;
 }
+.header__burger {
+    display: none;
+}
+@import "layout/_media.scss";
