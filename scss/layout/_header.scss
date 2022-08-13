@@ -3,7 +3,7 @@ header {
     width: 100%;
     top:0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
     &::before {
     content: '';
     position: absolute;
@@ -32,19 +32,34 @@ header {
         align-items: center;
         z-index: 5;
         position: relative;
+        transition-duration: 1.5s;
+        
         a {
         color:white;
         text-decoration: none;
         font-size: 15px;
+        &:hover {
+            background-color: white;
+            padding: 10px 20px;
+            color: #000;
+            border-radius: 20px;
         }
+        }
+
         .header__link_active {
             background-color: white;
             padding: 10px 20px;
            
+           
             border-radius: 20px;
             a {
                 color:black;
-                
+                &:hover {
+                    background-color: none;
+                    padding: 0;
+                    
+                    
+                }   
             }            
         }
     }

@@ -431,7 +431,7 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
 }
 header::before {
   content: "";
@@ -461,11 +461,18 @@ header .header__list {
   align-items: center;
   z-index: 5;
   position: relative;
+  transition-duration: 1.5s;
 }
 header .header__list a {
   color: white;
   text-decoration: none;
   font-size: 15px;
+}
+header .header__list a:hover {
+  background-color: white;
+  padding: 10px 20px;
+  color: #000;
+  border-radius: 20px;
 }
 header .header__list .header__link_active {
   background-color: white;
@@ -474,6 +481,10 @@ header .header__list .header__link_active {
 }
 header .header__list .header__link_active a {
   color: black;
+}
+header .header__list .header__link_active a:hover {
+  background-color: none;
+  padding: 0;
 }
 header .header__logo_link {
   position: relative;
@@ -509,6 +520,61 @@ body {
   display: none;
 }
 
+/*------Banner------*/
+.banner__background {
+  position: relative;
+}
+.banner__body {
+  position: absolute;
+  bottom: 70px;
+  z-index: 1;
+  transform: translate(-45%, 0);
+  left: 50%;
+}
+.banner__content {
+  padding: 0 15px;
+}
+.banner__content h1 {
+  font-size: 54px;
+  line-height: 59px;
+  text-align: center;
+  color: #FFFFFF;
+  padding-bottom: 20px;
+}
+.banner__content h3 {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #C0C0C0;
+}
+.banner__content p {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  color: #C0C0C0;
+}
+.banner .banner__background {
+  position: relative;
+  overflow: hidden;
+  padding: 48% 0 0 0;
+}
+.banner .banner__background .banner__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.banner .banner__items {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  display: flex;
+  gap: 15px;
+}
+
 /*-------Header menu -----*/
 @media (max-width: 992px) {
   header .header__list {
@@ -516,6 +582,9 @@ body {
   }
 }
 @media (max-width: 768px) {
+  body.lock {
+    overflow: hidden;
+  }
   header .header__burger {
     display: block;
     position: relative;
@@ -554,7 +623,7 @@ body {
     transition: all 0.3s ease 0s;
   }
   header .header__body {
-    height: 50px !important;
+    height: 75px !important;
   }
   header .header__body .header__menu {
     top: -100%;
@@ -564,8 +633,8 @@ body {
     height: 100%;
     background-color: black;
     margin-top: 70px;
-    justify-content: center;
-    display: flex;
+    text-align: center;
+    transition: all 0.3s ease 0s;
   }
   header .header__body .header__logo_link img {
     flex: 0 0 70px !important;
@@ -574,12 +643,46 @@ body {
     display: block;
   }
   header .header__body .header__list .header__link {
-    margin-top: 30px;
+    transition-duration: 1.5s;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  header .header__body .header__list .header__link:hover {
+    background: rgb(105, 105, 105);
   }
   header .header__body .header__list .header__link_active {
-    margin-top: 30px;
+    width: 155px;
+    text-align: center;
+    margin: 5px auto;
   }
   header .header__body .header__menu.active {
     top: 0 !important;
+  }
+}
+/*------BANNER-----*/
+@media (max-width: 768px) {
+  .banner__body {
+    bottom: 25px;
+    z-index: 1;
+    transform: none;
+    left: 0;
+  }
+  .banner .banner__items {
+    right: 15px;
+    bottom: 5px;
+  }
+}
+@media (max-width: 500px) {
+  .banner .banner__background {
+    padding: 100% 0 0 0;
+  }
+  .banner .banner__background h1 {
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-bottom: 5px;
   }
 }/*# sourceMappingURL=style.css.map */
