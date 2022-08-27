@@ -85,7 +85,6 @@ body {
     display: grid;
     grid-template-columns: 1fr minmax(100px,1200px)1fr;
     font-family: 'Poppins';
-    display: grid;
     justify-content: center;
     padding: 115px 0 100px 0;
     .what__title {
@@ -141,31 +140,6 @@ body {
                }
             }
         }
-        &__link {
-            display: flex;
-            max-width: 143px;
-            padding: 5px;
-            border-radius: 20px;
-            background-color: white;
-            margin-top: 20px;
-        }
-        
-            .link__circle {
-            background-color: black;
-            border-radius: 50%;
-            height: 32px;
-            width: 32px;
-            }
-            a {
-                display: grid;
-                align-items: center;
-                padding-left: 5px;
-                font-size: 15px;
-                line-height: 20px;
-                letter-spacing: 0.4px;
-                color: #000000;
-                text-decoration: none;
-            }
         }
     }
 
@@ -203,7 +177,98 @@ body {
         gap: 15px;
     }
 }
-
+.tools {
+    display: grid;
+    margin-top: -4px;
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: end;
+        align-items: center;
+    }
+    &__item {
+        display: grid;
+        position: relative;
+        img {
+            max-width: 100%;
+        }
+    }
+    &__block {
+        max-width: 556px;
+        padding: 0 15px;
+    }
+    &__title {
+        font-size: 28px;
+        line-height: 32px;
+        color: #FFFFFF;
+    }
+    &__text {
+        font-size: 14px;
+        line-height: 20px;
+        color: #FFFFFF;
+    }
+    &__subtitle {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #C0C0C0;
+    }
+    &__image {
+        position: relative;
+    }
+        &__icons {
+        position: absolute;
+        bottom:40px;
+        display: flex;
+        gap: 15px;
+        right: 40px;
+    }
+}
+.main__monstera {
+    margin-top: -4px;
+}
+.past {
+    padding: 120px 0 100px 0;
+    &__body {
+        display: grid;
+        padding: 0 15px;
+        grid-template-columns: 1fr minmax(200px,1200px)1fr;
+    }
+    &__content {
+        grid-column: 2/3;
+        h2 {
+            font-size: 40px;
+            line-height: 42px;
+            text-align: center;   
+            color: #FFFFFF;
+            &:not(:last-child) {
+                padding-bottom: 15px;
+            }
+        }
+        p {
+            font-size: 24px;
+            line-height: 30px;
+            text-align: center;
+            color: #C0C0C0;
+        }
+    }
+    &__brands {
+        img {
+            padding-top: 40px;
+            max-width: 100%;
+            &:last-child {
+                padding-right:0;
+            }
+        }
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        justify-content: center;
+        align-items: center;
+    }
+}
 
 
 

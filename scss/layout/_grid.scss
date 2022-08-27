@@ -18,3 +18,27 @@
     display: grid;
     grid-area: footer;
 }
+.link {
+    display: flex;
+    max-width: 143px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: white;
+    margin-top: 20px;
+    .link__circle {
+        background-color: black;
+        border-radius: 50%;
+        height: 32px;
+        width: 32px;
+        }
+        a {
+            display: grid;
+            align-items: center;
+            padding-left: 5px;
+            font-size: 15px;
+            line-height: 20px;
+            letter-spacing: 0.4px;
+            color: #000000;
+            text-decoration: none;
+        }
+}
