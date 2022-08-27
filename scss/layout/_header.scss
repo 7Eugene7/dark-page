@@ -15,7 +15,7 @@ header {
     z-index: 2;
     }
     .container {
-        max-width: 1320px;
+        max-width: 1230px;
         margin: 0 auto;
         padding: 0 15px;
     }
@@ -28,37 +28,36 @@ header {
     }
     .header__list{     
         display: flex;  
-        gap:30px;
         align-items: center;
         z-index: 5;
         position: relative;
         transition-duration: 1.5s;
         
+        
         a {
         color:white;
         text-decoration: none;
         font-size: 15px;
+        padding: 10px 20px;
+        
         &:hover {
             background-color: white;
-            padding: 10px 20px;
             color: #000;
             border-radius: 20px;
+            padding: 10px 20px;
         }
         }
 
         .header__link_active {
             background-color: white;
             padding: 10px 20px;
-           
-           
             border-radius: 20px;
+            margin-left: 10px;
             a {
                 color:black;
                 &:hover {
-                    background-color: none;
+                    background: none;
                     padding: 0;
-                    
-                    
                 }   
             }            
         }
